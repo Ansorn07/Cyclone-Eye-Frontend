@@ -10,7 +10,7 @@ export default function ResourcesPage() {
         <main>
             <div className="bg-muted border-b text-green-700">
                 <div className="container mx-auto px-4 py-16 text-center ">
-                    <h1 className="text-4xl md:text-5xl font-bold font-headline">Your Guide to Safety</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold font-headline"> 🍃Your Guide to Safety</h1>
                     <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-3xl mx-auto text-green-700">
                         Knowledge is our strongest shelter. Here are checklists, contacts, and answers to help you stay prepared.
                     </p>

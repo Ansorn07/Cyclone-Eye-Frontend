@@ -17,7 +17,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground  dark:text-black">
-            © {new Date().getFullYear()} CycloneEye. Handcrafted with care in India.
+            © {new Date().getFullYear()} CycloneEye. Handcrafted With Care in India.
           </p>
 
           {/* Navigation Links */}
