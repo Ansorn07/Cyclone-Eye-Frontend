@@ -1,4 +1,3 @@
-
 import { alertsData } from "@/lib/data";
 import AlertCard from "@/components/alert-card";
 
@@ -13,8 +12,8 @@ export default function AlertsPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold font-headline">Weather Alerts</h1>
-        <p className="text-muted-foreground mt-2">
+        <h1 className="text-5xl font-extrabold font-headline  dark:text-black"> 🌪️ Weather Alerts</h1>
+        <p className="font-extrabold dark:text-gray-100">
           Stay updated with the latest warnings and advisories from official sources.
         </p>
       </div>

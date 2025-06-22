@@ -29,8 +29,8 @@ export default function ForecastPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold font-headline">Cyclone Forecasts</h1>
-        <p className="text-muted-foreground mt-2">
+        <h1 className="text-5xl font-bold font-headline  dark:text-black">Cyclone Forecasts</h1>
+        <p className="text-muted-foreground mt-2 font-extrabold  dark:text-gray-100">
           Dive into the 5-day forecast for wind speed, pressure, and projected path.
         </p>
       </div>
