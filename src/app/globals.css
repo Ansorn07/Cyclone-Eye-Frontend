@@ -4,34 +4,34 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
+    --background: 215 80% 90%; /* tsunami sky */
     --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
+    --card: 216 100% 97%; /* soft blue card */
     --card-foreground: 222.2 84% 4.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
- 
-    --primary: 221.2 83.2% 53.3%;
+
+    --primary: 240 100% 50%; /* deep blue */
     --primary-foreground: 210 40% 98%;
- 
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --accent: 210 40% 96.1%;
+
+    --accent: 12 100% 60%; /* stormy orange */
     --accent-foreground: 222.2 47.4% 11.2%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
- 
+
     --radius: 0.5rem;
 
     --chart-1: 180 100% 50%;
@@ -45,16 +45,19 @@
     --severity-yellow: 48 100% 50%;
     --severity-green: 134 61% 41%;
   }
-}
- 
-@layer base {
+
   * {
-    @apply border-border;
+    border-color: hsl(var(--border)); /* Uses your CSS variable */
   }
+  
+
   body {
     @apply text-foreground;
-    background-color: hsl(var(--background));
-    background-image: linear-gradient(to bottom right, hsl(var(--background)), hsl(210 40% 94%));
+    background-image: url('/tsunami-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(4px);
   }
 }
 
@@ -62,8 +65,44 @@
   .animation-radar-sweep {
     animation: radar-sweep 5s linear infinite;
   }
+
   @keyframes radar-sweep {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-blink-soft {
+    animation: blink-soft 1.8s ease-in-out infinite;
+  }
+
+  @keyframes blink-soft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .radar-glow {
+    box-shadow: 0 0 20px rgba(0, 183, 255, 0.7);
+    border: 2px solid rgba(0, 183, 255, 0.5);
+    animation: pulse-glow 2s infinite;
+  }
+
+  @keyframes pulse-glow {
+    0% {
+      box-shadow: 0 0 10px rgba(0, 183, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 183, 255, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(0, 183, 255, 0.4);
+    }
   }
 }

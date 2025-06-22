@@ -1,5 +1,6 @@
 "use client";
 
+import CycloneLogo from "@/components/CycloneLogo";
 import React, { useState } from "react";
 import Link from "next/link";
 import {
@@ -38,45 +39,49 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-card">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 flex">
-          <Link href="/" className="flex items-center space-x-2">
-            <Wind className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline">CycloneEye</span>
-          </Link>
-        </div>
-        <nav className="hidden md:flex md:items-center md:gap-6 text-sm">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 border-b border-gray-700 shadow-2xl">
+      <div className="container flex h-16 items-center justify-between">
+        
+        {/* ✅ CycloneLogo placed here */}
+        <CycloneLogo />
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map(({ href, label }) => (
             <Link
               key={label}
               href={href}
               className={cn(
-                "transition-colors hover:text-primary",
-                pathname === href ? "text-primary font-semibold" : "text-foreground/70"
+                "transition-colors hover:text-cyan-400 hover:underline underline-offset-4 decoration-dotted",
+                pathname === href
+                  ? "text-cyan-300 font-semibold"
+                  : "text-gray-400"
               )}
             >
               {label}
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end gap-2">
+
+        {/* Right Controls */}
+        <div className="flex items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm">
+              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-cyan-300">
                 English
                 <ChevronDown className="w-4 h-4 ml-1" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="bg-gray-800 border border-gray-700 text-white">
               <DropdownMenuItem>English</DropdownMenuItem>
               <DropdownMenuItem>Odia</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-cyan-300 hover:text-cyan-400"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X /> : <Menu />}
@@ -84,17 +89,21 @@ export default function Header() {
           </Button>
         </div>
       </div>
+
+      {/* Mobile Nav */}
       {isMenuOpen && (
-        <div className="md:hidden bg-card border-t">
-          <div className="container pb-4 pt-2 flex flex-col gap-1">
+        <div className="md:hidden bg-gray-900 border-t border-gray-700 shadow-md">
+          <div className="container py-4 flex flex-col gap-2">
             {navLinks.map(({ href, label, icon }) => (
               <Link
                 key={label}
                 href={href}
                 onClick={() => setIsMenuOpen(false)}
                 className={cn(
-                  "flex items-center gap-3 rounded-md p-2 text-base transition-colors hover:bg-accent hover:text-accent-foreground",
-                  pathname === href ? "bg-accent text-accent-foreground" : "text-foreground/70"
+                  "flex items-center gap-3 rounded-md p-3 text-base transition-colors hover:bg-gray-800 hover:text-cyan-300",
+                  pathname === href
+                    ? "bg-gray-800 text-cyan-300 font-semibold"
+                    : "text-gray-400"
                 )}
               >
                 {icon}
@@ -104,6 +113,8 @@ export default function Header() {
           </div>
         </div>
       )}
+
+      {/* Ticker Below Header */}
       <AlertTicker />
     </header>
   );

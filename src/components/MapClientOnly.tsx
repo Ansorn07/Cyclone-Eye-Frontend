@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
-// Dynamically load Leaflet map client-side only
+
 const InteractiveMap = dynamic(() => import("./interactive-map"), {
   ssr: false,
   loading: () => <p className="text-center text-sm py-4">Loading map...</p>,

@@ -1,6 +1,7 @@
+
 import { alertsData } from "@/lib/data";
 import AlertCard from "@/components/alert-card";
-import 'leaflet/dist/leaflet.css';
+
 
 
 export default function AlertsPage() {
