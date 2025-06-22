@@ -1,0 +1,16 @@
+# Next.js build output
+.next/
+out/
+
+# Node dependencies
+node_modules/
+
+# Environment files
+.env*
+.env
+
+# Logs
+npm-debug.log*
+
+# Editor settings
+.vscode/
