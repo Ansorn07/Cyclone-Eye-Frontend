@@ -67,7 +67,7 @@ export default function Home() {
                   ))}
                   <Button
                     variant="outline"
-                    className="w-full border-cyan-300 text-cyan-200 hover:bg-cyan-800 hover:text-white"
+                    className="w-full  dark:text-black border-cyan-300 text-cyan-200 hover:bg-cyan-800 hover:text-white"
                     asChild
                   >
                     <Link href="/forecast">

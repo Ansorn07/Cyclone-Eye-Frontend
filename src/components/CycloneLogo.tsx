@@ -16,7 +16,7 @@ export default function CycloneLogo() {
       </div>
 
       {/* Logo Text */}
-      <span className="text-lg font-extrabold tracking-widest font-mono text-cyan-300 group-hover:text-cyan-100 transition-transform duration-300 group-hover:scale-105">
+      <span className="text-lg font-extrabold tracking-widest font-serif text-cyan-300 group-hover:text-cyan-100 transition-transform duration-300 group-hover:scale-105">
         CycloneEye
       </span>
 
