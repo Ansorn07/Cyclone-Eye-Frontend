@@ -11,5 +11,3 @@
 - 📍 **Location-Based Alerts** (UI ready)
 - 🌙 **Dark, Modern UI** – Cyclone-themed, fully responsive design
 - 📊 **Graph-ready Interface** – Structured to support data charts and future analytics
-
----
