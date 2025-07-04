@@ -10,4 +10,4 @@
 - 📚 **Cyclone History Viewer** – Explore past cyclones by name, year, or region
 - 📍 **Location-Based Alerts** (UI ready)
 - 🌙 **Dark, Modern UI** – Cyclone-themed, fully responsive design
-- 📊 **Graph-ready Interface** – Structured to support data charts and future analytics
+- 📊 **Graph-ready Interface** – Structured to support data charts and future analytics.
